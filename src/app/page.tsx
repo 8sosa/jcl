@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type UseInViewOptions, type Variants } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { COLLECTIONS, formatPrice } from "@/lib/data";
 import { useCart } from "@/context/CartContext";
@@ -17,25 +17,27 @@ const CONTAINER = {
 const SECTION_PAD = "clamp(5.5rem, 10vw, 9rem)";
 
 /* ─── animation helpers ────────────────────────────────────────────────── */
-function useReveal(opts?: { margin?: string }) {
+function useReveal(opts?: { margin?: UseInViewOptions["margin"] }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: opts?.margin ?? "-80px" });
   return { ref, inView };
 }
 
-const slideUp = {
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const slideUp: Variants = {
   hidden: { opacity: 0, y: 36 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: EASE } },
 };
 
-const slideLeft = {
+const slideLeft: Variants = {
   hidden: { opacity: 0, x: -40 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] } },
+  show: { opacity: 1, x: 0, transition: { duration: 0.85, ease: EASE } },
 };
 
-const slideRight = {
+const slideRight: Variants = {
   hidden: { opacity: 0, x: 40 },
-  show: { opacity: 1, x: 0, transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] } },
+  show: { opacity: 1, x: 0, transition: { duration: 0.85, ease: EASE } },
 };
 
 const stagger = (delay = 0.1) => ({
@@ -50,7 +52,7 @@ function Reveal({
   style,
 }: {
   children: React.ReactNode;
-  variants?: typeof slideUp;
+  variants?: Variants;
   delay?: number;
   style?: React.CSSProperties;
 }) {
