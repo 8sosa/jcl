@@ -4,7 +4,7 @@ import { useState } from "react";
 import { X } from "lucide-react";
 
 const messages = [
-  "Complimentary shipping on orders over ₦150,000",
+  "Complimentary shipping worldwide",
   "30-Night Sleep Trial on every order — no questions asked",
   "Now delivering to Lagos, Abuja & internationally via DHL Express",
 ];

@@ -117,25 +117,25 @@ export default function HomePage() {
 
         <div className="relative z-10" style={{ maxWidth: "800px" }}>
           <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} style={{ fontFamily: "var(--font-inter)", fontSize: "0.6rem", letterSpacing: "0.4em", textTransform: "uppercase", color: "#C9A96E", marginBottom: "2rem" }}>
-            Est. London · Designed for Nigeria
+            Est. London · Made in Italy
           </motion.p>
 
           <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.45, ease: [0.22, 1, 0.36, 1] }} style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(4rem, 10vw, 8rem)", fontWeight: 300, fontStyle: "italic", color: "#1A1A2E", lineHeight: 1, marginBottom: "0.3rem" }}>
-            Sleep Like
+            The Loom
           </motion.h1>
           <motion.h1 initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }} style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(4rem, 10vw, 8rem)", fontWeight: 300, color: "#1A1A2E", lineHeight: 1, marginBottom: "2.5rem" }}>
-            You&apos;ve Arrived.
+            Standard.
           </motion.h1>
 
           <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.9, delay: 0.85 }} style={{ width: "60px", height: "1px", backgroundColor: "#C9A96E", margin: "0 auto 2rem", transformOrigin: "center" }} />
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.9, delay: 1 }} style={{ fontFamily: "var(--font-inter)", fontSize: "clamp(0.8rem, 1.5vw, 0.95rem)", color: "#6B5B4E", lineHeight: 1.8, maxWidth: "520px", margin: "0 auto 3rem" }}>
-            The finest British bedding in Africa — long-staple Egyptian cotton, Belgian flax linen, and Mulberry silk, finished in certified mills in Portugal and Italy.
+            400 Thread Count Egyptian Cotton. Made in Italy. From the loom to your bedroom.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 1.15 }} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/collections" className="btn-primary">Explore Collections <ArrowRight size={14} /></Link>
-            <Link href="/about" className="btn-secondary" style={{ color: "#1A1A2E", borderColor: "rgba(26,26,46,0.3)" }}>Our Story</Link>
+            <Link href="/collections" className="btn-primary">Discover JCL <ArrowRight size={14} /></Link>
+            <Link href="/craftspeople" className="btn-secondary" style={{ color: "#1A1A2E", borderColor: "rgba(26,26,46,0.3)" }}>The Craft</Link>
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 1.4 }} className="flex items-center justify-center flex-wrap" style={{ gap: "2rem", marginTop: "3.5rem" }}>
